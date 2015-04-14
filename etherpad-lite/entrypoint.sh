@@ -39,7 +39,7 @@ if [ "$RESULT" != $ETHERPAD_DB_NAME ]; then
 	echo "Creating database ${ETHERPAD_DB_NAME}"
 
 	mysql -u${ETHERPAD_DB_USER} -p${ETHERPAD_DB_PASSWORD} -h${MYSQL_HOST} \
-	      -e "create database ${ETHERPAD_DB_NAME}"
+	      -e "create database ${ETHERPAD_DB_NAME}  default character set utf8;"
 fi
 
 if [ ! -f settings.json ]; then
